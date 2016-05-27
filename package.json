@@ -1,0 +1,28 @@
+{
+  "name": "detmir",
+  "version": "0.0.0",
+  "description": "Веб технологии в Детском мире",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/simareeno/detmir.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/simareeno/detmir/issues"
+  },
+  "homepage": "https://github.com/simareeno/detmir",
+  "dependencies": {
+	"gulp": "^3.9.1",
+	"gulp-plumber": "^1.0.1",
+	"gulp-watch": "^4.2.0",
+	"gulp-less": "~3.0.0",
+	"bower": "~1.3.0",
+	"less": "^2.5.1",
+	"less-plugin-autoprefix": "^1.4.0"
+  }
+}
