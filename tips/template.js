@@ -40,8 +40,7 @@ $(document).ready(function () {
 });
 
 // наш изначальный массив
-var initialArray =
-[
+var initialArray = [
 	{
 		"title": "Яблоко",
 		"price": 2200

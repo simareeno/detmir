@@ -1,0 +1,98 @@
+/*Селекторы*/
+a {
+	text-decoration: none;
+}
+
+* /* все */
+.block /*класс*/
+div.block /*тэг с классом*/
+.block .block__item /*класс внутри класса*/
+.block.block--xl /* несколько классов*/
+.block + .block /* все, кроме первого */
+input[type="button"] /* инпут с типом кнопки */
+:hover /* при наведении */
+:active /* при клике */
+:focus /* когда поле в фокусе */
+:first-child /* первый элемент */
+::before, ::after
+
+/*Позиционирование*/
+position: relative;
+position: absolute; /* в зависимости от body или блока с relative выше */
+top: 1px; /* передвигаем справа, работает только с включенным позиционированием */
+left: 2%; /* передвигаем слева, работает только с включенным позиционированием */
+z-index: 1; /* как слои в фотошопе, работают только с включенным позиционированием */
+float: left; /* как текст должен обтекать картинку? */
+
+/*Отображение*/
+display: block; /* на все доступное место */
+display: inline-block; /* в строчку */
+
+display: flex; /* хитрый флекс */
+justify-content: center; /* по центру */
+justify-content: flex-end; /* в конец или flex-start в начало*/
+justify-content: space-between; /* автоматические отступы между блоками или space-around вокруг*/
+align-items: center; /* так же как и justify-content */
+flex-wrap: wrap; /* переносим на новую строчку */
+flex-wrap: nowrap; /* не переносим */
+flex-grow: 1; /* сколько пространства занимает */
+
+width: 200px; /* ширина */
+height: 100%; /* высота */
+min-width: 100px; /* минимальная ширина */
+overflow: scroll;  /* что делаем с тем, что не влезает? еще можно спрятать, hidden */
+
+/* Отступы */
+margin-left: 20px; /* снаружи блока */
+margin: 20px auto 10px;
+padding: 20px 5px 10px 15px; /* внутри блока */
+
+/* Граница */
+border-width: 2px; /* толщина */
+border-style: solid; /* тип, например, есть еще dashed, пунктир */
+border-color: white; /* цвет */
+border-right: 20px dashed black;
+
+/* Анимации */
+transition-property: opacity; /* что анимируем */
+transition-duration: .2s; /* вермя */
+transition-delay: .2s; /* задержка */
+transition-timing-function: ease-in-out; /* изинг */
+transition: opacity .2s .2s ease-in-out, transform .2s ease-in;  /* короткая запись */
+
+animation-name: spin; /* название анимации */
+animation-duration: 4s; /* время */
+animation-iteration-count: infinite; /* количество повторений */
+animation-timing-function: linear; /* изинг */
+@keyframes spin {
+	0% {transform:rotate(0deg);} /* ключи анимации */
+	100% {transform:rotate(360deg);}
+}
+
+/* Текст */
+color: black; /* цвет текста */
+font-size: 20px; /* размер */
+font-weight: bold; /* вес */
+line-height: 28px; /* интерлиньяж */
+font-family: 'PT Sans', Arial, sans-serif; /* шрифт */
+letter-spacing: 1.5px; /* кернинг */
+text-transform: uppercase; /* прописные */
+text-decoration: none; /* без подчеркивания */
+
+/* Фон */
+background-color: rgba(255, 255, 255, 1); /* цвет фона */
+background-image: url(../img/bg.png); /* картинкой */
+background-repeat: no-repeat; /* не повторять */
+background-size: cover; /* растягивает изображение на блок */
+
+/* Разное */
+-webkit-font-smoothing: antialiased;  /* сглаживание шрифтов */
+border-radius: 20px; /* скругленные углы */
+box-shadow: 0px 5px 10px 0px rgba(255, 255, 255, .5);  /* Тень http://css3generator.com/ */
+text-shadow: 2px 2px 10px #73FFE3; /* Тень для текста http://css3generator.com/ */
+background: linear-gradient(to bottom, #1e5799 0%,#7db9e8 100%); /* градиент http://www.colorzilla.com/gradient-editor/ */
+cursor: pointer; /* меняем курсор */
+-webkit-user-select: none;  /* запрет на выделение */
+transform: translate(0px, 20px); /* перемещение */
+transform: scale(2); /* масштабирование */
+transform: rotate(90deg), skewX(5deg); /* поворот и skew по горизонтали */

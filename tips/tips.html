@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Заголовок страницы</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="library.js" ></script>
+</head>
+<body>
+
+	<!-- БЭМ -->
+	<div class="block block--red">
+		<div class="block__item">Текст</div>
+		<div class="block__item block__item--xl">
+			<span class="curved">ещетекст</span>
+		</div>
+	</div>
+
+	<!-- Заголовки, есть еще h2, h3, h4, h5 и h6 -->
+	<h1>Заголовок</h1>
+
+	<!-- Картинка -->
+	<img src="img/bg/png">
+
+	<!-- Ссылка. _blank откроет ссылку в новом окне -->
+	<a href="www.detmir.ru" target="_blank">Текст ссылки</a>
+
+	<!-- Список. Есть еще пронумерованный ol вместе ul  -->
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+	</ul>
+
+	<!-- Параграф -->
+	<p>Полный параграф текста</p>
+
+	<!-- Неразрывный пробел -->
+	Пойдем на&nbsp;речку
+
+	<!-- Скрипт, исполняемый прямо тут -->
+	<script>
+		go();
+	</script>
+
+	<!-- Стиль, подгружаемый прямо на странице -->
+	<style>
+		.body {
+			display: none;
+		}
+	</style>
+
+</body>
+</html>
