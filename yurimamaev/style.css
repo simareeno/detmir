@@ -1,0 +1,81 @@
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  margin: 100px;
+}
+
+.card {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #f0f0f0;
+  border-radius: 10px;
+  width: 272px;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  position: relative;
+  margin: 0 auto;
+  transform: scale(1);
+  transition: box-shadow .2s ease-in-out, transform .2s ease-in;
+}
+
+.card:hover {
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .2);
+  transform: scale(1.025);
+}
+
+.card__pic img {
+  max-height: 272px;
+  border-radius: 10px 10px 0 0;
+}
+
+.card__name  {
+  font-size: 15px;
+}
+
+.card__price {
+  font-weight: 800;
+}
+
+.card__price-actual {
+  font-size: 22px;
+  color: #F9414C;
+}
+
+.card__price-old {
+  font-size: 18px;
+  color: #BDBDBD;
+}
+
+.card__labels {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  display: table;
+}
+
+.card_labels-item + .card_labels-item {
+    margin-top: 8px;
+}
+
+.card_labels-item {
+  color: white;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 800;
+  padding: 6px 8px;
+  border-radius: 5px;
+  display: table;
+}
+
+.card_labels-item--discount {
+  background-color: #F53232;
+
+}
+
+.card_labels-item--new {
+  background-color: #03A54F;
+}
+
+.card_labels-item--hit {
+  background-color: #29ABE1;
+}
