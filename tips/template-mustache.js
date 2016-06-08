@@ -20,9 +20,7 @@ function sortByName(a, b){
 }
 
 function filterBy(property, keyword, e) {
-
 	return e.color === keyword;
-
 }
 
 $(document).ready(function () {
@@ -31,7 +29,6 @@ $(document).ready(function () {
 
 	// сортировка
 	$('.select').change(function() {
-
 
 		if ($(this).val() === 'name') {
 			changedArray.sort(sortByName);
@@ -62,6 +59,18 @@ $(document).ready(function () {
 		show(changedArray); // показываем измененный массив
 	});
 });
+
+// склонение
+function getDeclension(number, titles) {
+    cases = [2, 0, 1, 1, 1, 2];
+    return titles[ (number%100>4 && number%100<20)? 2 : cases[(number%10<5)?number%10:5] ];
+}
+
+// Количество товаров
+function allItems() {
+	var length = initialArray.length;
+	var word = getDeclension(length, ['товар', 'товара', 'товаров']);
+}
 
 // наш изначальный массив
 var initialArray = [
