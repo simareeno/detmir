@@ -10,7 +10,6 @@ say('привет')
 
 var body = $('body');
 body.click(function () {
-
 	var randomNumber = Math.random();
 	if (randomNumber < 0.33) {
 		say('арбуз')

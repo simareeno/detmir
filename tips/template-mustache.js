@@ -15,8 +15,8 @@ function sortByPrice(a, b) {
 function sortByName(a, b){
 	// console.log( "сравниваю " + a.title + " и " + b.title );
 	if(a.title < b.title) return -1;
-    if(a.title > b.title) return 1;
-    return 0;
+	if(a.title > b.title) return 1;
+	return 0;
 }
 
 function filterBy(property, keyword, e) {
@@ -62,8 +62,8 @@ $(document).ready(function () {
 
 // склонение
 function getDeclension(number, titles) {
-    cases = [2, 0, 1, 1, 1, 2];
-    return titles[ (number%100>4 && number%100<20)? 2 : cases[(number%10<5)?number%10:5] ];
+	cases = [2, 0, 1, 1, 1, 2];
+	return titles[ (number%100>4 && number%100<20)? 2 : cases[(number%10<5)?number%10:5] ];
 }
 
 // Количество товаров
