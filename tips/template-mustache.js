@@ -7,7 +7,7 @@ function show(array) {
 
 // сортировка по цене
 function sortByPrice(a, b) {
-	// console.log( "сравниваю " + a.price + " и " + b.price );
+	console.log( "сравниваю " + a.price + " и " + b.price );
 	return a.price - b.price;
 }
 
@@ -82,7 +82,7 @@ var initialArray = [
 	}, {
 		"title": "Банан",
 		"price": 2500,
-		"frut": true,
+		"fruit": true,
 		"color": 'yellow'
 	}, {
 		"title": "Морковка",

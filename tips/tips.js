@@ -23,8 +23,9 @@ body.click(function () {
 function double(number) {
 	return number * 2;
 }
-var number = double(2);
-double(number)
+
+var idk = double(3222);
+double(idk)
 
 var fruits = ['арбуз', 'яблоко', 'груша']
 console.log(fruits[0]);
