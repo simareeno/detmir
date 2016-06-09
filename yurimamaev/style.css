@@ -1,7 +1,7 @@
 body {
   font-family: 'Open Sans', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
-  margin: 100px;
+  margin: 0px;
 }
 
 .card {
@@ -79,3 +79,23 @@ body {
 .card_labels-item--hit {
   background-color: #29ABE1;
 }
+
+.header {
+  background-color: #FFDF01;
+  padding: 39px 0 39px 0;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.menu__item {
+  display: inline-block;
+  font-weight: 800;
+  font-size: 16px;
+  color: black;
+  padding: 0 15px;
+}
+
+/*.menu__item + .menu__item {
+    margin-left: 20px;
+}*/
