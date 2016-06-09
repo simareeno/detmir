@@ -13,14 +13,14 @@ body {
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
   position: relative;
   margin: 0 auto;
-  transform: scale(1);
-  transition: box-shadow .2s ease-in-out, transform .2s ease-in;
+  /*transform: scale(1);
+  transition: box-shadow .2s ease-in-out, transform .2s ease-in;*/
 }
 
-.card:hover {
+/*.card:hover {
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .2);
   transform: scale(1.025);
-}
+}*/
 
 .card__pic img {
   max-height: 272px;
@@ -33,11 +33,16 @@ body {
 
 .card__price {
   font-weight: 800;
+  flex-grow: 1;
 }
 
 .card__price-actual {
   font-size: 22px;
   color: #F9414C;
+}
+
+.card__price-actual, .card__price-old {
+  display: inline-block;
 }
 
 .card__price-old {
@@ -99,3 +104,37 @@ body {
 /*.menu__item + .menu__item {
     margin-left: 20px;
 }*/
+
+.card__button {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #ffcf01;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__bottom, .card__name {
+  padding: 16px;
+}
+
+.card__button polygon.st1 {
+  fill: #ffcf01;
+}
+
+.card__button svg {
+  width: 24px;
+  position: relative;
+  left: -1px;
+}
+
+.card__button:hover {
+  cursor: pointer;
+}
+
+.card__bottom {
+  display: flex;
+  align-items: flex-end;
+
+}
