@@ -13,13 +13,6 @@ body {
   position: relative;
   margin: 0 auto;
   box-shadow: 0 0 0 0 rgba(0,0,0, 0);
-  transition: box-shadow .2s ease-in-out, transform 1s ease-in;
-  transform: scale(1) rotate(0deg);
-}
-
-.card:hover {
-  box-shadow: 0 20px 100px 0 rgba(0,0,0, .5);
-  transform: scale(1.2) rotate(360deg);
 }
 
 .card__pic img {
@@ -29,6 +22,7 @@ body {
 
 .card__price {
   font-weight: 900;
+  flex-grow: 1;
 }
 
 .card__price-actual {
@@ -37,10 +31,20 @@ body {
 
 .card__price-old {
   font-size: 18px;
+  color: #ccc;
+  margin-left: 10px;
+}
+
+.card__price-actual, .card__price-old {
+  display: inline-block;
 }
 
 .card__name {
   font-size: 15px
+}
+
+.card__name, .card__bottom {
+  padding: 10px 20px;
 }
 
 .card__labels {
@@ -59,6 +63,34 @@ body {
   border-radius: 5px;
   color: white;
   display: table;
+}
+
+.card__bottom {
+  display: flex;
+}
+
+.card__button {
+  width: 40px;
+  height: 40px;
+  background-color: #ffcf01;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__button:hover {
+  cursor: pointer;
+}
+
+.card__button svg {
+  width: 24px;
+  position: relative;
+  left: -1px;
+}
+
+.card__button polygon {
+  fill: #ffcf01;
 }
 
 .card__labels-item + .card__labels-item {
