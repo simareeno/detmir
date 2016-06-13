@@ -1,19 +1,19 @@
 function show(array) {
-	var source = $(".template").html();
-	var template = Handlebars.compile(source);
-	var html = template(array);
-	$('.items').html(html)
+	var source = $(".template").html(); // берем наш шаблон
+	var template = Handlebars.compile(source); // делаем из него шаблон для handlebars
+	var html = template(array); // вставляем в шаблон наши данные
+	$('.items').html(html) // и вставляем это в наш блок с классом .items
 }
 
 // сортировка по цене
 function sortByPrice(a, b) {
-	console.log( "сравниваю " + a.price + " и " + b.price );
+	// console.log( "сравниваю " + a.price + " и " + b.price );
 	return a.price - b.price;
 }
 
 // сортировка по имени
 function sortByName(a, b){
-	console.log( "сравниваю " + a.title + " и " + b.title );
+	// console.log( "сравниваю " + a.title + " и " + b.title );
 	if(a.title < b.title) return -1;
 	if(a.title > b.title) return 1;
 	return 0;
@@ -25,7 +25,7 @@ function filterBy(property, keyword, e) {
 
 // склонение
 function getDeclension(number, titles) {
-	cases = [2, 0, 1, 1, 1, 2];
+	var cases = [2, 0, 1, 1, 1, 2];
 	return titles[ (number%100>4 && number%100<20)? 2 : cases[(number%10<5)?number%10:5] ];
 }
 
@@ -33,11 +33,13 @@ function getDeclension(number, titles) {
 function allItems() {
 	var length = initialArray.length;
 	var word = getDeclension(length, ['товар', 'товара', 'товаров']);
+	$('.all').text(length + ' ' + word);
 }
 
 $(document).ready(function () {
 	show(initialArray); // сначала загружаем наш изначальный массив
 	var changedArray = initialArray.slice(); // делаем копию
+	allItems();
 
 	// сортировка
 	$('.select').change(function() {
