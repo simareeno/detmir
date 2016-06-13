@@ -73,22 +73,54 @@ function allItems() {
 }
 
 // наш изначальный массив
-var initialArray = [
-	{
-		"title": "Яблоко",
+var initialArray = [ // массив
+	{ // объект
+		"title": "Юбочка с красными цветочками",
 		"price": 2200,
-		'fruit': true,
-		"color": 'green'
-	}, {
-		"title": "Банан",
-		"price": 2500,
-		"fruit": true,
-		"color": 'yellow'
-	}, {
-		"title": "Морковка",
+		'img': '1',
+	}, { // объект
+		"title": "Синие джинсы",
+		"price": 820,
+		"oldPrice": 1320,
+		'img': '2',
+		"sale": '20%',
+		"new": true
+	}, { // объект
+		"title": "Розовая юбочка",
+		"price": 2350,
+		'img': '3',
+		"hit": true
+	}, { // объект
+		"title": "Голубая юбочка с тюлем",
+		"price": 1750,
+		'img': '4'
+	}, { // объект
+		"title": "Бирюзовая юбочка с принтом от Disney, Nickelodeon, маркая",
+		"price": 900,
+		'img': '5',
+		'new': true,
+		"exclusive": true
+	}, { // объект
+		"title": "Длинное платье с бабочками",
+		"price": 5500,
+		'img': '6'
+	}, { // объект
+		"title": "Платье в полосочку",
+		"price": 1500,
+		'img': '7',
+		"hit": true
+	}, { // объект
+		"title": "Платье-костюм с кучей цветов",
+		"price": 2150,
+		"oldPrice": 2700,
+		'img': '8'
+	}, { // объект
+		"title": "Розовая юбочка в кружочек",
 		"price": 1950,
-		"fruit": false,
-		"color": 'orange',
-		"sale": 'item--sale'
+		'img': '9'
+	}, { // объект
+		"title": "Голубенькое мимими платьеце с розовой ленточкой",
+		"price": 1350,
+		'img': '10'
 	}
 ];

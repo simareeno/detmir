@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>Template</title>
-    <script type="text/javascript" src="mustache.min.js" ></script>
+	<script type="text/javascript" src="handlebars.min.js" ></script>
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -14,22 +14,39 @@
 		<option value="name">по имени</option>
 	</select>
 
-	<select name="color" id="" class="color">
-		<option value="color">цвет</option>
-		<option value="yellow">желтый</option>
-		<option value="orange">оранжевый</option>
-	</select>
+	<!-- <select name="label" class="label">
+		<option value="special">спецпредложения</option>
+		<option value="sale">со скидкой</option>
+		<option value="new">новинки</option>
+	</select> -->
 
 	<!-- куда выводим -->
 	<div class="items" style="margin-top:50px"></div>
 
-	<!-- шаблон -->
-	<script id="template" type="x-tmpl-mustache">
-		{{#.}}
-			<div class="item {{sale}}">{{title}} {{price}}</div>
-		{{/.}}
+	<!-- шаблон handlebars.js -->
+	<script class="template" type="text/x-handlebars-template">
+			{{#each this}}
+			<div class="card">
+				<div class="card__pic">
+					<img src="../images/{{img}}.png">
+				</div>
+				<div class="card__name">{{title}}</div>
+				<div class="card__bottom">
+					<div class="card__price">
+					<div class="card__price-actual">{{price}}</div>
+					{{#if oldPrice}} <div class="card__price-old"> {{oldPrice}} </div> {{/if}}
+					</div>
+				</div>
+				<div class="card__labels">
+				{{#if sale}} <div class="card__labels-item card__labels-item--discount">скидка {{sale}}%</div> {{/if}}
+				{{#if new}}<div class="card__labels-item  card__labels-item--new">новинка</div>{{/if}}
+				{{#if hit}}<div class="card__labels-item  card__labels-item--hit">Хит продаж</div>{{/if}}
+				</div>
+			</div>
+			{{/each}}
 	</script>
 
   </body>
-  <script src="template-mustache.js" charset="utf-8"></script>
+
+  <script src="template-handlebars.js" charset="utf-8"></script>
 </html>

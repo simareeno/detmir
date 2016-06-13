@@ -1,37 +1,38 @@
-var fruit = 'арбуз';
-var fruitPrice = 99.99;
-var fruitTasty = true;
-console.log(fruit);
+var fruit; // Создаем пустую переменную
+var fruit = 'арбуз'; // Создаем переменную со строкой внутри
+var fruitPrice = 99.99; // Переменная с числом
+var fruitTasty = true; // Переменная с да-нет
+console.log(fruit); // Выводим переменную в консоль
 
-function say(this) {
-	console.log(this);
+function say(this) { // Функция с именем say, которая принимает что-угодно и называет это this
+	console.log(this); // И выводит это в консоль
 }
-say('привет')
+say('привет') // Вызываем функцию и передаем ей строку
 
-var body = $('body');
-body.click(function () {
-	var randomNumber = Math.random();
-	if (randomNumber < 0.33) {
-		say('арбуз')
-	} else if (randomNumber > 0.33 && < 0.66) {
-		say('яблоко')
-	} else {
-		say('груша')
+var body = $('body'); // Создаем переменную и присваеваем ей, используя селекторы из CSS, объект
+
+body.click(function () { // При клике на этот объект, начинается функция
+	var randomNumber = Math.random(); // Создаем объект, в котором обращаемся к Math и генерируем число от 0 до 1
+	if (randomNumber < 0.33) { // Если число меньше 0.33
+		say('арбуз') // Выводим строку арбуз
+	} else if (randomNumber > 0.33 && < 0.66) { // если больше 0.33 и меньше 0.66
+		say('яблоко') // выводим яблоко
+	} else { // в остальных случаях
+		say('груша') // выводим грушу
 	}
 })
 
 function double(number) {
-	return number * 2;
+	return number * 2; // функция принимает число и возвращает его же, умноженного на 2
 }
 
 var idk = double(3222);
-double(idk)
 
-var fruits = ['арбуз', 'яблоко', 'груша']
-console.log(fruits[0]);
-console.log(fruits.length);
+var fruits = ['арбуз', 'яблоко', 'груша'] // массив
+console.log(fruits[0]); // выводим первый элемент массива в консоль
+console.log(fruits.length); // выводим к консоль длину массива
 
-var fruit = {
+var fruit = { // объект
 	'name': 'арбуз',
 	'price': 99.99,
 	'tasty': true
@@ -51,10 +52,10 @@ var fruits = [
 	}
 ];
 
-fruits.forEach(function(item) {
+fruits.forEach(function(item) { // цикл для каждого
 	console.log(item);
 });
 
-for (var i = 0; i < fruits.length; i++) {
-	console.log(fruits[i]);
+for (var i = 0; i < fruits.length; i++) { // создаем переменную i, пока i не станет равно длине массива, увеличиваем i на 1
+	console.log(fruits[i]); // выводим текущий пункт массива
 }

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Template</title>
+    <script type="text/javascript" src="mustache.min.js" ></script>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+	<!-- выбор сортировки -->
+	<select class="select">
+		<option value="relevance">по релевантности</option>
+		<option value="price">по цене</option>
+		<option value="name">по имени</option>
+	</select>
+
+	<select name="label" class="label">
+		<option value="special">спецпредложения</option>
+		<option value="sale">со скидкой</option>
+		<option value="new">новинки</option>
+	</select>
+
+	<!-- куда выводим -->
+	<div class="items" style="margin-top:50px"></div>
+
+	<!-- шаблон mustache.js -->
+	<script id="template" type="x-tmpl-mustache">
+		{{#.}}
+			<div class="item {{sale}}">{{title}} {{price}}</div>
+		{{/.}}
+	</script>
+
+	</body>
+  <script src="template-mustache.js" charset="utf-8"></script>
+</html>
