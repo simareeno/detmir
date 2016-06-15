@@ -13,14 +13,70 @@ body {
   position: relative;
   margin: 0 auto;
   box-shadow: 0 0 0 0 rgba(0,0,0, 0);
-  transition: box-shadow .2s ease-in-out, transform .2s linear;
-  transform: scale(1);
+  /*transition: box-shadow .2s ease-in-out, transform .2s linear;*/
+  /*transform: scale(1);*/
 }
 
-.card:hover {
-  box-shadow: 0 20px 100px 0 rgba(0,0,0, .5);
-  transform: scale(10);
+.card__bottom {
+  display: flex;
+  align-items: flex-end;
 }
+
+.card__button:hover {
+  cursor: pointer;
+  background-color: #F1B902;
+}
+
+/*.card__button:active {
+  cursor: pointer;
+  background-color: #E0AC03;
+}*/
+
+.card__button svg {
+  width: 24px;
+  position: relative;
+  left: -1px;
+}
+
+.card__button polygon {
+  fill: #ffcf01;
+}
+
+.card__button {
+  width: 40px;
+  height: 40px;
+  background-color: #ffcf01;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__button-click {
+  width: 40px;
+  height: 40px;
+  background-color: #ddd;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__button-click:hover {
+  cursor: pointer;
+}
+
+.card__button-click svg {
+  width: 24px;
+  position: relative;
+  left: -1px;
+  opacity: 0.2;
+}
+
+/*.card:hover {*/
+  /*box-shadow: 0 20px 100px 0 rgba(0,0,0, .5);*/
+  /*transform: scale(10);*/
+/*}*/
 
 .card__pic img {
   max-height: 272px;
@@ -29,6 +85,7 @@ body {
 
 .card__price {
   font-weight: 900;
+  flex-grow: 1;
 }
 
 .card__name {
@@ -41,6 +98,16 @@ body {
 
 .card__price-old {
   font-size: 18px;
+  color: #ccc;
+  margin-left: 10px;
+}
+
+.card__price-actual, .card__price-old {
+  display: inline-block;
+}
+
+.card__name, .card__bottom {
+  padding: 15px 20px;
 }
 
 .card__labels {
