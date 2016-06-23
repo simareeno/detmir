@@ -32,8 +32,8 @@ function getDeclension(number, titles) {
 // Количество товаров
 function allItems() {
 	var length = initialArray.length;
-	var word = getDeclension(length, ['товар', 'товара', 'товаров']);
-	$('.all').text(length + ' ' + word);
+	var word = getDeclension(1, ['товар', 'товара', 'товаров']);
+	$('.all').text(1 + ' ' + word);
 }
 
 $(document).ready(function () {
@@ -64,7 +64,7 @@ var initialArray = [ // массив
 	{ // объект
 		"title": "Юбочка с красными цветочками",
 		"price": 2200,
-		'img': '1',
+		'img': '1'
 	}, { // объект
 		"title": "Синие джинсы",
 		"price": 820,
