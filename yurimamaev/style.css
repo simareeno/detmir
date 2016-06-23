@@ -115,6 +115,10 @@ body {
   justify-content: center;
 }
 
+.card__button-clicked {
+  background-color: #ddd;
+}
+
 .card__bottom, .card__name {
   padding: 16px;
 }
@@ -131,6 +135,11 @@ body {
 
 .card__button:hover {
   cursor: pointer;
+}
+
+.card__button-clicked:hover {
+  cursor: pointer;
+  background-color: #ddd;
 }
 
 .card__bottom {

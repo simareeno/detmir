@@ -50,14 +50,11 @@
   </div>
 
 <script>
-  var may = 5;
-  var july = 7;
-  var august = 8;
-  function sum(month1, month2, month3)
-  {
-      console.log(month1+month2+month3);
-  }
-  sum (may, july, august);
+var btn = $('.card__button');
+btn.click(function () {
+  btn.toggleClass('card__button-clicked');
+});
+
 
 </script>
 
