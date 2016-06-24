@@ -43,6 +43,11 @@ body {
   cursor: default;
 }
 
+.nav a.active:hover {
+  color: #64CFFF;
+  opacity: 1;
+}
+
 @media screen and (min-width: 768px) {
   .nav li {
       /*width: 120px;*/
@@ -55,6 +60,11 @@ body {
     }
 
  }
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .card {
   /*border-width: 1px;*/
@@ -98,6 +108,10 @@ body {
 
 .card__price-actual, .card__price-old {
   display: inline-block;
+}
+
+.card__price-actual--sale {
+  color: red;
 }
 
 .card__name, .card__bottom {
@@ -164,6 +178,7 @@ body {
 
 .card__button:hover {
   cursor: pointer;
+  background: #F5C223;
 }
 
 .card__bottom {
@@ -172,5 +187,14 @@ body {
 }
 
 .card__button-click {
-  background: black;
+  background: #ddd;
+}
+
+.card__button-click svg {
+  opacity: 0.5;
+}
+
+.card__button-click:hover {
+  cursor: pointer;
+  background: #ddd;
 }
